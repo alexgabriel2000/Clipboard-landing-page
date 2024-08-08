@@ -1,0 +1,48 @@
+@use './components/variaveis';
+@use './components/mixins';
+
+.workflow-tools {
+    h2 {
+        text-align: center;
+        color: variaveis.$cor-de-titulos;
+        padding-bottom: 1rem;
+    }
+    .workflow-text {
+        color: variaveis.$cor-de-textos;
+        font-size: 14px;
+        text-align: center;
+    }
+    ul {
+        @include mixins.df-fl-cent;
+        justify-content: space-evenly;
+        padding: 50px 0 90px 0;       
+        li {
+            @include mixins.display-fl-cl;
+            gap: 1rem;
+            width: 30%;
+            h3 {
+                color: variaveis.$cor-de-titulos;
+            }
+            p {
+                color: variaveis.$cor-de-textos;
+                margin: auto;
+                line-height: 1.8rem;
+                width: 85%;
+            }
+            h3, p {
+                text-align: center;
+            }
+        }
+    }
+    .workflow-icon {
+        margin: auto;
+    }
+    .workflow-img {
+        width: 40px;
+        height: 35px;
+    }
+    .img-padding {
+        margin-top: 26px;
+    }
+    
+}

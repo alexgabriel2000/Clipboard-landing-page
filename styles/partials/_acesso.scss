@@ -1,0 +1,21 @@
+@use './components/variaveis';
+
+.acesso-clipboard {
+    padding-top: 100px;
+    h2 {
+        color: variaveis.$cor-de-titulos;
+        padding-bottom: 1rem;
+    }
+    p {
+        color: variaveis.$cor-de-textos;
+        line-height: 1.8rem;
+        width: 45%;
+        margin: auto;
+    }
+    .acesso-img {
+        padding-top: 70px;
+    }
+    h2, p, .acesso-img {
+        text-align: center;
+    }
+}

@@ -1,0 +1,43 @@
+@use './components/variaveis';
+@use './components/mixins';
+
+
+.follow__snippets {
+    .follow-titulo {
+        color: variaveis.$cor-de-titulos;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .follow-primary-text {
+        display: block;
+        color: variaveis.$cor-de-textos;
+        margin: auto;
+        text-align: center;
+        width: 50%;
+        line-height: 1.8rem;
+        padding-bottom: 70px;
+    }
+    h3 {
+        color: variaveis.$cor-de-titulos;
+        padding-bottom: 8px;
+    }
+    .follow-second-text {
+        color: variaveis.$cor-de-textos;
+        width: 95%;
+        line-height: 1.8rem;
+    }
+    .follow-img {
+        display: flex;
+        margin-left: -30px;
+    }
+    .follow-features {
+        @include mixins.display-fl-cl;
+        width: 40%;
+        padding: 5.5rem;
+        
+        .follow-list {
+            @include mixins.display-fl-cl;
+            gap: 2.5rem;
+        }
+    }
+}

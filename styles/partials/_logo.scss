@@ -1,0 +1,13 @@
+@use './components/variaveis';
+@use './components/mixins';
+
+.client-logos {
+    .logos-lista {
+        @include mixins.df-fl-cent;
+        justify-content: space-evenly;
+        margin: auto;
+        gap: 2rem;
+        width: 90%;
+        padding-bottom: 100px;
+    }
+}

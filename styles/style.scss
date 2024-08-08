@@ -1,0 +1,24 @@
+@use './partials/components/variaveis';
+@use './partials/header';
+@use './partials/features';
+@use './partials/acesso';
+@use './partials/workflow';
+@use './partials/logo';
+@use './partials/download';
+@use './partials/footer';
+@use './partials/components/mixins';
+@use './partials/mobile';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: variaveis.$fonte-principal;
+}
+

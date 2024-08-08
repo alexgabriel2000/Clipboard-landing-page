@@ -1,0 +1,185 @@
+@use './components/mixins';
+@use './components/variaveis';
+
+@media screen and (max-width: 375px) {
+// Config geral
+    * {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+// Cabeçalho
+    header {
+        .img-fundo01 {
+            background-image: url(/images/bg-header-mobile.png);
+        }
+        h1 {
+            width: 90%;
+            text-align: center
+        }
+        p {
+            @extend h1;
+            padding-bottom: 10px
+        }
+        .cabecalho__botoes {
+            @include mixins.display-fl-cl; 
+            align-items: center;
+            .botao-ios, .botao-mac {
+                width: 80%;
+            }
+        }
+    }
+
+// follow snippets
+    .follow__snippets {
+        @include mixins.display-fl-cl;
+        align-items: center;
+        .follow-titulo {
+            width: 80%;
+        }
+        .follow-primary-text {
+            width: 80%;
+            text-align: center
+        }
+        .follow-img {
+            margin: 0;
+            padding: 0;
+            @include mixins.display-fl-cl;
+            img {
+                width: 85%;
+                margin: auto;
+            }
+        }
+        .follow-features {
+            margin: 0 auto;
+            padding: 0;
+            padding-top: 60px;
+            width: 100%;
+            .follow-list {
+                li h3, p {
+                    text-align: center;
+                }
+                li p {
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+// Acesso clipboard
+    .acesso-clipboard {
+        @include mixins.display-fl-cl;
+        align-items: center;
+        padding-top: 130px;
+        padding-bottom: 80px;
+
+        h2 {
+            width: 80%;
+        }
+        p {
+            width: 85%;
+        }
+        .acesso-img {
+            img {
+                width: 95%;
+            }
+        }
+    }
+
+// Workflow tools
+    .workflow-tools {
+        @include mixins.display-fl-cl;
+        align-items: center;
+        h2 {
+            width: 80%;
+        }
+        p {
+            width: 70%;
+        }
+        .workflow-text {
+            padding-bottom: 60px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            @include mixins.display-fl-cl; 
+            .workflow-icon {
+                text-align: center;
+            }
+            li {
+                width: 100%;
+                p {
+                    padding-bottom: 50px
+                }
+            }
+        }
+    }
+
+// Client logos
+    .client-logos {
+        padding-top: 70px;
+        padding-bottom: 30px;
+        .logos-lista {
+            @include mixins.display-fl-cl;
+            gap: 4rem;
+            li {
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+
+// clipboard-download
+    .clipboard-download {
+        @include mixins.display-fl-cl;
+        align-items: center;
+        h2 {
+            width: 80%;
+        }
+        p {
+            width: 81%;
+            margin: 0;
+            padding: 0;
+        }
+        .cabecalho__botoes {
+            @include mixins.display-fl-cl; 
+            align-items: center; 
+            .botao-ios, .botao-mac  {
+                width: 80%;
+            } 
+        }
+    }
+
+// Rodapé
+    footer {
+        nav {
+            @include mixins.display-fl-cl; 
+            padding: 40px 0 0 0;
+            
+            .rodape-img {
+                img {
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .rodape-links {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                padding: 2.5rem 0;
+            }
+            .rodape-logo {
+                @include mixins.df-fl-cent;
+                justify-content: center;
+                padding-bottom: 40px;
+                li {
+                    width: 20px;
+                    height: 20px;
+                }  
+            }
+        }
+    }
+}

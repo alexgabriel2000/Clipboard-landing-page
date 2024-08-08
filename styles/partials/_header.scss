@@ -1,0 +1,51 @@
+@use './components/variaveis';
+@use './components/mixins';
+
+header {
+    @include mixins.display-fl-cl;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 90px;
+
+    .img-fundo01 {
+        display: flex;
+        background-image: url(../images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        height: 330px;
+        width: 100%;
+    }
+    .img-fundo02 {
+        background-image: url(../images/logo.svg);
+        background-repeat: no-repeat;
+        margin: auto;
+        height: 125px;
+        width: 125px;
+    }
+    h1 {
+        color: variaveis.$cor-de-titulos;
+    }
+    p {
+        color: variaveis.$cor-de-textos;
+    }
+    .cabecalho__botoes {
+        display: flex;
+        gap: 1rem;
+        .botao-ios {
+            background-color: variaveis.$cor-botao-primario;
+            cursor: pointer;
+        }
+        .botao-mac {
+            background-color: variaveis.$cor-botao-secundario;
+            cursor: pointer;
+        }
+        .botao-ios, .botao-mac {
+            padding: 1em;
+            margin-top: 1rem;
+            border: none;
+            width: 160px;
+            border-radius: 36px;
+            color: white;
+        }
+    }
+}
+

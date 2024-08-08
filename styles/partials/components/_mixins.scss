@@ -1,0 +1,9 @@
+@mixin display-fl-cl {
+    display: flex;
+    flex-direction: column;
+}
+@mixin df-fl-cent {
+    display: flex;
+    align-items: center;
+}
+
